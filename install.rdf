@@ -12,11 +12,11 @@
 	<em:name>BookerFox</em:name>
 	
 
-	<em:version>1.2.1</em:version>
+	<em:version>1.3</em:version>
 	<em:creator>Benjamin J. Thompson</em:creator>
 	<em:contributor></em:contributor>
 
-	<em:description>An add-on to make repetitive web browsing tasks easier for those who sell books on lots of different marketplaces.</em:description>
+	<em:description>Makes managing lots of book seller accounts easy!</em:description>
 	<em:iconURL>chrome://bookerfox/skin/bookerfox.png</em:iconURL>
 
 	<em:targetApplication>

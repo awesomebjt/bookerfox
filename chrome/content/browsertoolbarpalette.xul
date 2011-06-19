@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://bookerfox/skin/overlay.css" type="text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://bookerfox/locale/overlay.dtd">
-<overlay id="bookerfox-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="bookerfox-browsertoolbarpalette-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
   <script src="ff-overlay.js"/>
   
@@ -11,9 +11,10 @@
   </stringbundleset>
 
 
-  <toolbox id="navigator-toolbox">
-    <toolbar class="chromeclass-toolbar" toolbarname="BookerFox Toolbar" customizable="true" id="bookerfox-toolbar">
-<toolbaritem>	<toolbarbutton id="DiscountBtn" type="menu" label="Partial Refund!  ">
+<toolbarpalette id="BrowserToolbarPalette">
+
+<toolbaritem id="tbPartial" class="toolbarbutton-class" label="Partial Refund">
+    <toolbarbutton id="DiscountBtn" type="menu" label="Partial Refund  ">
 		<menupopup>
 		<menuitem label="15%" oncommand="bookerfox.Calculate(15)" />
 		<menuitem label="20%" oncommand="bookerfox.Calculate(20)" />
@@ -23,14 +24,12 @@
 		<menuitem label="80%" oncommand="bookerfox.Calculate(80)" />
 		</menupopup>
 		</toolbarbutton>
-		
-</toolbaritem>
+<textbox id="BookPrice" value="" /> </toolbaritem>
 
-<toolbaritem>	<textbox id="BookPrice" value="" /> </toolbaritem>
 
-<splitter />
 
-<toolbaritem>   <toolbarbutton id="OrderBtn" type="menu" label="Look Up Order  ">
+<toolbaritem id="tbOrder" class="toolbarbutton-class" label="Orders Lookup">
+    <toolbarbutton id="OrderBtn" type="menu" label="Look Up Order  ">
 		<menupopup>
 		<menuitem label="Amazon US" oncommand="bookerfox.OrderLookup('AMZUS')" />
 		<menuitem label="Amazon UK" oncommand="bookerfox.OrderLookup('AMZUK')" />
@@ -52,15 +51,14 @@
 		<menuitem label="eBay (by email)" oncommand="bookerfox.OrderLookup('EBA-EM')" />
 		<menuitem label="eBay (by order#)" oncommand="bookerfox.OrderLookup('EBA-ON')" />
 		</menupopup>
-		</toolbarbutton>
-
+	</toolbarbutton>
+	<textbox id="OrderID" value="" />
 </toolbaritem>
 
-<toolbaritem>	<textbox id="OrderID" value="" /> </toolbaritem>
 
-<splitter />
 
-<toolbaritem>	<toolbarbutton id="TrackingBtn" type="menu" label="Track  ">
+<toolbaritem id="tbTracking" class="toolbarbutton-class" label="Tracking">
+    <toolbarbutton id="TrackingBtn" type="menu" label="Track  ">
 		<menupopup>
 	<!--<menuitem label="UPS-MI" oncommand="bookerfox.Track('UPS-MI')" /> -->
 		<menuitem label="USPS" oncommand="bookerfox.Track('USPS')" />
@@ -68,26 +66,28 @@
 		<menuitem label="FedEx" oncommand="bookerfox.Track('FEDEX')" />
 		</menupopup>
 		</toolbarbutton>
+    <textbox id="TrackingNum" value="" />
+
 </toolbaritem>
 
-<toolbaritem>	<textbox id="TrackingNum" value="" /> </toolbaritem>
 
-<splitter />
 
-<toolbaritem>	<toolbarbutton id="ListingsBtn" type="menu" label="Listings by ID ">
-	<menupopup>
-	<menuitem label="Alibris" oncommand="bookerfox.LookupListing('ALI')" />
+<toolbaritem id="tbListings" class="toolbarbutton-class" label="Listings by ID">
+    <toolbarbutton id="ListingsBtn" type="menu" label="Listings by ID ">
+    <menupopup>
+    <menuitem label="Alibris" oncommand="bookerfox.LookupListing('ALI')" />
 	<menuitem label="Abebooks" oncommand="bookerfox.LookupListing('ABE')" />
 	<menuitem label="eBay" oncommand="bookerfox.LookupListing('EBA')" />
 	</menupopup>
 	</toolbarbutton>
+	<textbox id="ListingID" value="" />
 </toolbaritem>
-<toolbaritem>	<textbox id="ListingID" value="" /> </toolbaritem>
 	
 
-<splitter />
 
-<toolbaritem>	<toolbarbutton id="LoginsBtn" type="menu" label="Marketplace Login Pages ">
+
+<toolbaritem id="tbLogins" class="toolbarbutton-class" label="Market Logins">
+    <toolbarbutton id="LoginsBtn" type="menu" label="Market Login Pages ">
 		<menupopup>
 		<menuitem label="Amazon US" oncommand="bookerfox.GotoLink('AMZUS')" />
 		<menuitem label="Amazon UK" oncommand="bookerfox.GotoLink('AMZUK')" />
@@ -107,12 +107,11 @@
 		<menuitem label="Half" oncommand="bookerfox.GotoLink('HAF')" />
 		<menuitem label="eBay" oncommand="bookerfox.GotoLink('EBA')" />
 		</menupopup>
-		</toolbarbutton>
-</toolbaritem>
+	</toolbarbutton>
+</toolbaritem>    
 
+</toolbarpalette>
 
-    </toolbar>
-  </toolbox>
-
-
+<!--    </toolbar>   
+  </toolbox> -->
 </overlay>

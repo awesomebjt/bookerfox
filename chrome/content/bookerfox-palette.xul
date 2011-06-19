@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://bookerfox/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://bookerfox/locale/overlay.dtd">
+<overlay id="bookerfox-palette-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <script src="ff-overlay.js"/>
+  
+  
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="bookerfox-strings" src="chrome://bookerfox/locale/overlay.properties"/>
+  </stringbundleset>
+
+
+<toolbarpalette id="bookerfox-palette">
+
+<toolbaritem id="tbPartial" label="Partial Refund"> <toolbarbutton id="DiscountBtn" type="menu" label="Partial Refund  ">
+		<menupopup>
+		<menuitem label="15%" oncommand="bookerfox.Calculate(15)" />
+		<menuitem label="20%" oncommand="bookerfox.Calculate(20)" />
+		<menuitem label="25%" oncommand="bookerfox.Calculate(25)" />
+		<menuitem label="50%" oncommand="bookerfox.Calculate(50)" />
+		<menuitem label="75%" oncommand="bookerfox.Calculate(75)" />
+		<menuitem label="80%" oncommand="bookerfox.Calculate(80)" />
+		</menupopup>
+		</toolbarbutton>
+<textbox id="BookPrice" value="" /> </toolbaritem>
+
+
+
+<toolbaritem id="tbOrder">
+    <toolbarbutton id="OrderBtn" type="menu" label="Look Up Order  ">
+		<menupopup>
+		<menuitem label="Amazon US" oncommand="bookerfox.OrderLookup('AMZUS')" />
+		<menuitem label="Amazon UK" oncommand="bookerfox.OrderLookup('AMZUK')" />
+		<menuitem label="Amazon CA" oncommand="bookerfox.OrderLookup('AMZCA')" />
+		<menuitem label="Amazon DE" oncommand="bookerfox.OrderLookup('AMZDE')" />
+		<menuitem label="Amazon FR" oncommand="bookerfox.OrderLookup('AMZFR')" />
+		<menuitem label="Amazon JP" oncommand="bookerfox.OrderLookup('AMZJP')" />
+		<menuitem label="Abebooks" oncommand="bookerfox.OrderLookup('ABE')" />
+		<menuitem label="Alibris" oncommand="bookerfox.OrderLookup('ALI')" />
+		<menuitem label="A1Books" oncommand="bookerfox.OrderLookup('A1B')" />
+		<menuitem label="Barnes and Noble" oncommand="bookerfox.OrderLookup('BAN')" />
+		<menuitem label="Biblio" oncommand="bookerfox.OrderLookup('BIB')" />
+		<menuitem label="Buy.com" oncommand="bookerfox.OrderLookup('BUY')" />
+		<!-- <menuitem label="Valore" oncommand="bookerfox.OrderLookup('VAL')" /> -->
+		<!-- <menuitem label="eCampus" oncommand="bookerfox.OrderLookup('ECA')" /> -->
+		<!-- <menuitem label="TextbookX" oncommand="bookerfox.OrderLookup('TBX')" /> -->
+		<menuitem label="Half" oncommand="bookerfox.OrderLookup('HAF')" />
+		<menuitem label="eBay (by userid)" oncommand="bookerfox.OrderLookup('EBA')" />
+		<menuitem label="eBay (by email)" oncommand="bookerfox.OrderLookup('EBA-EM')" />
+		<menuitem label="eBay (by order#)" oncommand="bookerfox.OrderLookup('EBA-ON')" />
+		</menupopup>
+	</toolbarbutton>
+	<textbox id="OrderID" value="" />
+</toolbaritem>
+
+
+
+<toolbaritem id="tbTracking">
+    <toolbarbutton id="TrackingBtn" type="menu" label="Track  ">
+		<menupopup>
+	<!--<menuitem label="UPS-MI" oncommand="bookerfox.Track('UPS-MI')" /> -->
+		<menuitem label="USPS" oncommand="bookerfox.Track('USPS')" />
+		<menuitem label="UPS" oncommand="bookerfox.Track('UPS')" />
+		<menuitem label="FedEx" oncommand="bookerfox.Track('FEDEX')" />
+		</menupopup>
+		</toolbarbutton>
+    <textbox id="TrackingNum" value="" />
+
+</toolbaritem>
+
+
+
+<toolbaritem id="tbListings">
+    <toolbarbutton id="ListingsBtn" type="menu" label="Listings by ID ">
+    <menupopup>
+    <menuitem label="Alibris" oncommand="bookerfox.LookupListing('ALI')" />
+	<menuitem label="Abebooks" oncommand="bookerfox.LookupListing('ABE')" />
+	<menuitem label="eBay" oncommand="bookerfox.LookupListing('EBA')" />
+	</menupopup>
+	</toolbarbutton>
+	<textbox id="ListingID" value="" />
+</toolbaritem>
+	
+
+
+
+<toolbaritem id="tbLogins">
+    <toolbarbutton id="LoginsBtn" type="menu" label="Marketplace Login Pages ">
+		<menupopup>
+		<menuitem label="Amazon US" oncommand="bookerfox.GotoLink('AMZUS')" />
+		<menuitem label="Amazon UK" oncommand="bookerfox.GotoLink('AMZUK')" />
+		<menuitem label="Amazon CA" oncommand="bookerfox.GotoLink('AMZCA')" />
+		<menuitem label="Amazon DE" oncommand="bookerfox.GotoLink('AMZDE')" />
+		<menuitem label="Amazon FR" oncommand="bookerfox.GotoLink('AMZFR')" />
+		<menuitem label="Amazon JP" oncommand="bookerfox.GotoLink('AMZJP')" />
+		<menuitem label="Abebooks" oncommand="bookerfox.GotoLink('ABE')" />
+		<menuitem label="Alibris" oncommand="bookerfox.GotoLink('ALI')" />
+		<menuitem label="A1Books" oncommand="bookerfox.GotoLink('A1B')" />
+		<menuitem label="Barnes and Noble" oncommand="bookerfox.GotoLink('BAN')" />
+		<menuitem label="Biblio" oncommand="bookerfox.GotoLink('BIB')" />
+		<menuitem label="Buy.com" oncommand="bookerfox.GotoLink('BUY')" />
+		<menuitem label="Valore" oncommand="bookerfox.GotoLink('VAL')" />
+		<menuitem label="eCampus" oncommand="bookerfox.GotoLink('ECA')" />
+		<menuitem label="TextbookX" oncommand="bookerfox.GotoLink('TBX')" />
+		<menuitem label="Half" oncommand="bookerfox.GotoLink('HAF')" />
+		<menuitem label="eBay" oncommand="bookerfox.GotoLink('EBA')" />
+		</menupopup>
+	</toolbarbutton>
+</toolbaritem>    
+
+</toolbarpalette>
+
+<!--    </toolbar>   
+  </toolbox> -->
+</overlay>
