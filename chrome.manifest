@@ -1,0 +1,6 @@
+content   bookerfox                 chrome/content/
+skin      bookerfox   classic/1.0   chrome/skin/
+locale    bookerfox   en-US         chrome/locale/en-US/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://bookerfox/content/ff-overlay.xul

@@ -1,0 +1,42 @@
+/* This is just an example.  You shouldn't do this. */
+#bookerfox-hello
+{
+  color: red ! important;
+}
+#bookerfox-toolbar-button
+{
+  list-style-image: url("chrome://bookerfox/skin/toolbar-button.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#bookerfox-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 24px 48px  0px);
+}
+[iconsize="small"] #bookerfox-toolbar-button
+{
+  -moz-image-region: rect( 0px 40px 16px 24px);
+}
+[iconsize="small"] #bookerfox-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 40px 40px 24px);
+}
+
+#DiscountBtn {
+	 list-style-image: url("chrome://bookerfox/skin/percent-16x16.png");
+	 }
+
+#OrderBtn {
+     list-style-image: url("chrome://bookerfox/skin/cash-register-16x16.png");
+	 }
+	 
+#TrackingBtn {
+	 list-style-image: url("chrome://bookerfox/skin/binoculars-16x16.png");
+	 }
+	
+#LoginsBtn {
+	 list-style-image: url("chrome://bookerfox/skin/shopping-cart-16x16.png");
+	 }
+	 
+#ListingsBtn {
+	 list-style-image: url("chrome://bookerfox/skin/invoice-16x16.png");
+	 }

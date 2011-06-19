@@ -1,0 +1,8 @@
+<!ENTITY bookerfox.label "Your localized menuitem">
+<!ENTITY bookerfoxContext.label "Your Menuitem">
+<!ENTITY bookerfoxContext.accesskey "Y">
+<!ENTITY bookerfoxToolbarButton.label "Your Toolbar Button">
+<!ENTITY bookerfoxToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY bookerfoxSidebar.label "Your Sidebar">
+<!ENTITY bookerfoxToolbar.name  "example">
+<!ENTITY bookerfoxToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &bookerfoxToolbar.name;">
