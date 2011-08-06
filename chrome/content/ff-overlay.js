@@ -26,7 +26,7 @@ bookerfox.Calculate = function(d) {
 
 
 bookerfox.OrderLookup = function(mpid) {
-  OrderNum = document.getElementById('OrderID');
+  var OrderNum = document.getElementById('OrderID');
   var prefix = new String();
   var suffix = new String();
 
@@ -206,7 +206,7 @@ bookerfox.GotoLink = function(mphome) {
 
 
 bookerfox.Track = function(PS) {
-  TrackingNum = document.getElementById('TrackingNum');
+  var TrackingNum = document.getElementById('TrackingNum');
   var tprefix = new String();
   var tsuffix = new String();
   
@@ -239,7 +239,7 @@ bookerfox.Track = function(PS) {
 };
 
 bookerfox.LookupListing = function(mkt) {
-  ListingID = document.getElementById('ListingID');
+  var ListingID = document.getElementById('ListingID');
   var llprefix = new String();
   
   switch(mkt) {
