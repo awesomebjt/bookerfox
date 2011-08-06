@@ -1,6 +1,11 @@
 bookerfox.onFirefoxLoad = function(event) {
   document.getElementById("contentAreaContextMenu")
           .addEventListener("popupshowing", function (e){ bookerfox.showFirefoxContextMenu(e); }, false);
+  document.getElementById("bookerfox-toolbar").insertItem("tbPartial")
+  document.getElementById("bookerfox-toolbar").insertItem("tbOrder")
+  document.getElementById("bookerfox-toolbar").insertItem("tbTracking")
+  document.getElementById("bookerfox-toolbar").insertItem("tbListings")
+  document.getElementById("bookerfox-toolbar").insertItem("tbLogins")
 };
 
 bookerfox.showFirefoxContextMenu = function(event) {
