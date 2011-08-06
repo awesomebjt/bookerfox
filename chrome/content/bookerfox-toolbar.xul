@@ -12,8 +12,11 @@
 
 
 <toolbox id="navigator-toolbox" palette="bookerfox-palette">
-<toolbar class="chromeclass-toolbar" toolbarname="BookerFox Toolbar" customizable="true" id="bookerfox-toolbar">
-
+<toolbar class="chromeclass-toolbar"
+		 toolbarname="BookerFox Toolbar"
+		 customizable="true"
+		 defaultset="tbPartial,tbOrder,tbTracking,tbListings,tbLogins"
+		 id="bookerfox-toolbar">
 
 
 </toolbar>
