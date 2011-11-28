@@ -12,16 +12,15 @@ bookerfox.showFirefoxContextMenu = function(event) {
 window.addEventListener("load", bookerfox.onFirefoxLoad, false);
 
 
-bookerfox.Calculate = function(d) {
+function bookerfox.Calculate(d) {
   var BookPrice = document.getElementById('BookPrice');
   var p = parseFloat(BookPrice.value);
-  var r = Math.round(p*d)/100;
-  BookPrice.value = r;
-};
+  BookPrice.value = Math.round(p*d)/100;
+}
 
 
 
-bookerfox.OrderLookup = function(mpid) {
+function bookerfox.OrderLookup(mpid) {
   var OrderNum = document.getElementById('OrderID');
   var prefix = new String();
   var suffix = new String();
@@ -97,27 +96,27 @@ bookerfox.OrderLookup = function(mpid) {
   case "EBA": //eBay orders by username
   prefix = "http://k2b-bulk.ebay.com/ws/eBayISAPI.dll?MyEbaySellingSoldListings&searchparam=4&Search=Search&searchvalue=";
   break;
-  
+
   case "EBA-ON": //eBay orders by order number
   prefix = "http://k2b-bulk.ebay.com/ws/eBayISAPI.dll?MyEbaySellingSoldListings&searchparam=12&Search=Search&searchvalue=";
   break;
-  
+
   case "EBA-EM": //eBay orders by email address
   prefix = "http://k2b-bulk.ebay.com/ws/eBayISAPI.dll?MyEbaySellingSoldListings&searchparam=3&Search=Search&searchvalue=";
   break;
 
   default:
   prefix = "http://www.google.com";
-  };
+  }
 
 
 gBrowser.selectedTab = gBrowser.addTab(prefix + OrderNum.value + suffix);
 
-};
+}
 
 
 
-bookerfox.GotoLink = function(mphome) {
+function bookerfox.GotoLink(mphome) {
   var url = new String();
 
 
@@ -193,15 +192,13 @@ bookerfox.GotoLink = function(mphome) {
 
   default:
   url = "http://www.google.com/";
-  };
+  }
 
   gBrowser.selectedTab = gBrowser.addTab(url);
 
-};
+}
 
-
-
-bookerfox.Track = function(PS) {
+function bookerfox.Track(PS) {
   var TrackingNum = document.getElementById('TrackingNum');
   var tprefix = new String();
   var tsuffix = new String();
@@ -228,34 +225,30 @@ bookerfox.Track = function(PS) {
   
   default:
   tprefix = "http://www.google.com/";
-  };
+  }
   
   gBrowser.selectedTab = gBrowser.addTab(tprefix + TrackingNum.value);
   
-};
+}
 
-bookerfox.LookupListing = function(mkt) {
+function bookerfox.LookupListing(mkt) {
   var ListingID = document.getElementById('ListingID');
   var llprefix = new String();
   
   switch(mkt) {
-  
   case "ABE":
   llprefix = "http://www.abebooks.com/servlet/BookDetailsPL?bi=";
   break;
-  
   case "ALI":
   llprefix = "http://www.alibris.com/booksearch.detail?invid=";
   break;
-  
   case "EBA":
   llprefix = "http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=";
   break;
-  
   default:
   tprefix = "http://www.google.com/";
-  };
+  }
   
   gBrowser.selectedTab = gBrowser.addTab(llprefix + ListingID.value);
   
-};
+}
